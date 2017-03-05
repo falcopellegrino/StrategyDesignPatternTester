@@ -10,6 +10,7 @@ namespace StrategyDesignPatternTester
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
