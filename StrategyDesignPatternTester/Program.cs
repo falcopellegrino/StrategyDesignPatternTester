@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Structural = StrategyDesignPatternTester.SctructuralCode;
-//using Real = StrategyDesignPatternTester.RealWorldCode;
-//using My = StrategyDesignPatternTester.MyCode;
+using Real = StrategyDesignPatternTester.RealWorldCode;
+using My = StrategyDesignPatternTester.MyCode;
 
 namespace StrategyDesignPatternTester
 {
@@ -61,9 +61,41 @@ namespace StrategyDesignPatternTester
             // Real-world code in C#
             // This real-world code demonstrates the Strategy pattern which encapsulates sorting algorithms in the form of sorting objects.
             // This allows clients to dynamically change sorting strategies including Quicksort, Shellsort, and Mergesort.
+
+            // Two contexts following different strategies
+            Real.SortedList studentsRecord = new Real.SortedList();
+
+            studentsRecord.Add("Samuel");
+            studentsRecord.Add("Jimmy");
+            studentsRecord.Add("Sandra");
+            studentsRecord.Add("Vivek");
+            studentsRecord.Add("Anna");
+
+            studentsRecord.SetSortStrategy(new Real.QuickSort());
+            studentsRecord.Sort();
+
+            studentsRecord.SetSortStrategy(new Real.ShellSort());
+            studentsRecord.Sort();
+
+            studentsRecord.SetSortStrategy(new Real.MergeSort());
+            studentsRecord.Sort();
+
+            // Wait for user
+            Console.ReadLine();
             #endregion
 
             #region MyCode
+            My.GoogleMaps maps;
+
+            maps = new My.GoogleMaps(new My.CreatoreDiPercorsoBreve());
+            maps.CreaPercorso();
+
+            maps = new My.GoogleMaps(new My.CreatoreDiPercorsoVeloce());
+            maps.CreaPercorso();
+
+
+            // Wait for user
+            Console.ReadLine();
             #endregion
         }
     }

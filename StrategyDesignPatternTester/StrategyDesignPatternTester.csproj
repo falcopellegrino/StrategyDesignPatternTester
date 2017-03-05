@@ -43,8 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyCode\CreatoreDiPercorsoBreve.cs" />
+    <Compile Include="MyCode\CreatoreDiPercorsoVeloce.cs" />
+    <Compile Include="MyCode\GoogleMaps.cs" />
+    <Compile Include="MyCode\PercorsoStrategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealWorldCode\SortedList.cs" />
+    <Compile Include="RealWorldCode\MergeSort.cs" />
+    <Compile Include="RealWorldCode\ShellSort.cs" />
+    <Compile Include="RealWorldCode\QuickSort.cs" />
+    <Compile Include="RealWorldCode\SortStrategy.cs" />
     <Compile Include="SctructuralCode\ConcreteStrategyC.cs" />
     <Compile Include="SctructuralCode\ConcreteStrategyB.cs" />
     <Compile Include="SctructuralCode\ConcreteStrategyA.cs" />
@@ -54,10 +63,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MyCode\" />
-    <Folder Include="RealWorldCode\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
